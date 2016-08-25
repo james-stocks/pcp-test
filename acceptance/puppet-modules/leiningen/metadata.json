@@ -1,0 +1,16 @@
+{
+  "name": "jstocks-leiningen",
+  "version": "0.1.2",
+  "author": "jstocks",
+  "summary": "Bootstraps leiningen",
+  "license": "Apache-2.0",
+  "source": "https://github.com/james-stocks/puppet-leiningen",
+  "project_page": "https://github.com/james-stocks/puppet-leiningen",
+  "issues_url": "https://github.com/james-stocks/puppet-leiningen/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"maestrodev-wget","version_requirement":">= 1.7.3"}
+  ],
+  "data_provider": null
+}
+

@@ -1,8 +1,13 @@
 require 'pcp_test/config_helper.rb'
 extend PcpTestConfigHelper
 
-step 'Fetch Puppet module for pcp-broker' do
-  on(pcp_broker, puppet('module install jstocks-pcp_broker'))
+step 'Copy Puppet module for pcp-broker' do
+  on(pcp_broker, puppet('module','install','puppetlabs-stdlib'))
+  on(pcp_broker, puppet('module','install','puppetlabs-vcsrepo'))
+  on(pcp_broker, puppet('module','install','puppetlabs-hocon'))
+  on(pcp_broker, puppet('module','install','maestrodev-wget'))
+  copy_module_to(pcp_broker, :source => 'puppet-modules/leiningen', :module_name => 'leiningen')
+  copy_module_to(pcp_broker, :source => 'puppet-modules/pcp_broker', :module_name => 'pcp_broker')
 end
 
 step 'Install pcp-broker' do
