@@ -1,0 +1,9 @@
+AMI:
+  centos-6-x86-64-west:
+    :image:
+      :foss: ami-aa8b039a
+    :region: us-west-2
+  el-7-x86-64-west:
+    :image:
+      :default: ami-fb104fcb
+    :region: us-west-2
